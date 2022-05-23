@@ -108,8 +108,8 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
-    agentClimb: 0.4
+    agentSlope: 55
+    agentClimb: 0.8
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 1e8bec38b30e6e845b5fe68efcb334cd, type: 2}
 --- !u!1001 &31586421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 940d55d4117386f4f9398ea3ff52d4cd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 940d55d4117386f4f9398ea3ff52d4cd, type: 3}
       propertyPath: m_RootOrder
@@ -362,12 +362,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125851740}
-  m_Layer: 0
+  - component: {fileID: 125851741}
+  m_Layer: 3
   m_Name: BridgeHanging (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &125851740
 Transform:
@@ -385,6 +386,19 @@ Transform:
   m_Father: {fileID: 1090618286}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 3.6, y: 33.26, z: -1}
+--- !u!65 &125851741
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125851739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 0.5, z: 9}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &142283662
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,12 +408,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 142283663}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgePontoon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &142283663
 Transform:
@@ -429,12 +443,12 @@ GameObject:
   - component: {fileID: 194980108}
   - component: {fileID: 194980107}
   - component: {fileID: 194980106}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &194980105
 Transform:
@@ -472,7 +486,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194980104}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -526,12 +540,12 @@ GameObject:
   - component: {fileID: 230473819}
   - component: {fileID: 230473821}
   - component: {fileID: 230473820}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_pontoon_01.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &230473819
 Transform:
@@ -683,12 +697,12 @@ GameObject:
   - component: {fileID: 246898807}
   - component: {fileID: 246898809}
   - component: {fileID: 246898808}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &246898807
 Transform:
@@ -766,12 +780,12 @@ GameObject:
   - component: {fileID: 255929938}
   - component: {fileID: 255929940}
   - component: {fileID: 255929939}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01_rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &255929938
 Transform:
@@ -847,12 +861,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 276997609}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeHanging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &276997609
 Transform:
@@ -881,12 +895,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 381100560}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeHanging (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &381100560
 Transform:
@@ -895,15 +909,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381100559}
-  m_LocalRotation: {x: 0.020887941, y: -0.08574451, z: 0.021927157, w: 0.9958569}
-  m_LocalPosition: {x: -141.34, y: -61.5, z: 172}
+  m_LocalRotation: {x: 0.017324416, y: -0.08567935, z: 0.021623474, w: 0.99593747}
+  m_LocalPosition: {x: -141.34, y: -61.92, z: 172}
   m_LocalScale: {x: 3.88, y: 3.1400003, z: 5.57}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 276997609}
   m_Father: {fileID: 1090618286}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 2.6, y: -9.79, z: 2.3}
+  m_LocalEulerAnglesHint: {x: 2.19, y: -9.79, z: 2.3}
 --- !u!1 &385175371
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,12 +927,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 385175372}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeHanging (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &385175372
 Transform:
@@ -1019,12 +1033,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 557812982}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeHanging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &557812982
 Transform:
@@ -1136,7 +1150,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &900663456
 GameObject:
@@ -1150,12 +1164,12 @@ GameObject:
   - component: {fileID: 900663460}
   - component: {fileID: 900663459}
   - component: {fileID: 900663458}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 126
   m_IsActive: 1
 --- !u!4 &900663457
 Transform:
@@ -1183,7 +1197,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6011650620552791136, guid: 90e6e3e05613b6942979075cfaf65038, type: 3}
 --- !u!23 &900663459
@@ -1193,7 +1207,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900663456}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1319,12 +1333,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 941721016}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeHanging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &941721016
 Transform:
@@ -1420,14 +1434,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.12541932, y: 0.0025973164, z: -0.00032834747, w: 0.99210036}
-  m_LocalPosition: {x: 241.1, y: 13.5, z: 238.1}
+  m_LocalRotation: {x: 0.21686551, y: 0, z: 0, w: 0.9762015}
+  m_LocalPosition: {x: 0, y: 4.78, z: -4.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 14.41, y: 0.3, z: 0}
+  m_Father: {fileID: 1506862396}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 25.05, y: 0, z: 0}
 --- !u!1001 &971360292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1511,12 +1525,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1019422109}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgePontoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1019422109
 Transform:
@@ -1543,12 +1557,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1090618286}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bridges
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1090618286
 Transform:
@@ -1573,7 +1587,7 @@ Transform:
   - {fileID: 142283663}
   - {fileID: 125851740}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1252502019
 GameObject:
@@ -1586,12 +1600,12 @@ GameObject:
   - component: {fileID: 1252502020}
   - component: {fileID: 1252502022}
   - component: {fileID: 1252502021}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_pontoon_01.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1252502020
 Transform:
@@ -1817,7 +1831,7 @@ GameObject:
   - component: {fileID: 1346946547}
   - component: {fileID: 1346946546}
   - component: {fileID: 1346946545}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MyTerrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1882,7 +1896,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1458319923
 GameObject:
@@ -1895,12 +1909,12 @@ GameObject:
   - component: {fileID: 1458319924}
   - component: {fileID: 1458319926}
   - component: {fileID: 1458319925}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01_rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1458319924
 Transform:
@@ -1967,6 +1981,93 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458319923}
   m_Mesh: {fileID: -6181396518072428055, guid: 90e6e3e05613b6942979075cfaf65038, type: 3}
+--- !u!1 &1506862393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506862396}
+  - component: {fileID: 1506862394}
+  - component: {fileID: 1506862395}
+  - component: {fileID: 1506862398}
+  m_Layer: 0
+  m_Name: MainCharacter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!195 &1506862394
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506862393}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1506862395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506862393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776b4a08e69c63142bd1c3d75b8286e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedCharacter: 1
+  speedRotation: 100
+--- !u!4 &1506862396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506862393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 212.82, y: 14.97, z: 189.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3977805568475283537}
+  - {fileID: 963194228}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506862398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506862393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a47cd7b15ecccf4e8161be287f56913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMaskMovement:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1001 &1577734630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2050,12 +2151,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1609998659}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgePontoon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1609998659
 Transform:
@@ -2084,12 +2185,12 @@ GameObject:
   - component: {fileID: 1648080061}
   - component: {fileID: 1648080063}
   - component: {fileID: 1648080062}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01_rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1648080061
 Transform:
@@ -2168,12 +2269,12 @@ GameObject:
   - component: {fileID: 1679065591}
   - component: {fileID: 1679065590}
   - component: {fileID: 1679065589}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1679065588
 Transform:
@@ -2211,7 +2312,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679065587}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2267,7 +2368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 940d55d4117386f4f9398ea3ff52d4cd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 940d55d4117386f4f9398ea3ff52d4cd, type: 3}
       propertyPath: m_RootOrder
@@ -2374,7 +2475,7 @@ Transform:
   - {fileID: 92646783}
   - {fileID: 241936063}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.45}
 --- !u!1001 &1957065246
 PrefabInstance:
@@ -2389,7 +2490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 940d55d4117386f4f9398ea3ff52d4cd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 940d55d4117386f4f9398ea3ff52d4cd, type: 3}
       propertyPath: m_RootOrder
@@ -2469,12 +2570,12 @@ GameObject:
   - component: {fileID: 1970302048}
   - component: {fileID: 1970302050}
   - component: {fileID: 1970302049}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1970302048
 Transform:
@@ -2574,7 +2675,7 @@ Transform:
   - {fileID: 1679951393}
   - {fileID: 31586422}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2042797678
 PrefabInstance:
@@ -2586,6 +2687,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 940d55d4117386f4f9398ea3ff52d4cd, type: 3}
       propertyPath: m_Name
       value: Rock2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 940d55d4117386f4f9398ea3ff52d4cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 940d55d4117386f4f9398ea3ff52d4cd, type: 3}
       propertyPath: m_RootOrder
@@ -2663,12 +2768,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2050786397}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgePontoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2050786397
 Transform:
@@ -2697,12 +2802,12 @@ GameObject:
   - component: {fileID: 2056578890}
   - component: {fileID: 2056578892}
   - component: {fileID: 2056578891}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2056578890
 Transform:
@@ -3036,12 +3141,12 @@ GameObject:
   - component: {fileID: 6810824507852936747}
   - component: {fileID: 9217653810546734745}
   - component: {fileID: 7207484896170369659}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_rock_broken_01.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &926391605473260895
 GameObject:
@@ -3055,12 +3160,12 @@ GameObject:
   - component: {fileID: 6810824507818967369}
   - component: {fileID: 9217653810579874299}
   - component: {fileID: 7207484896203257113}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_rock_broken_01.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &992907721941275466
 Transform:
@@ -3289,12 +3394,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1905441033780373313}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeHanging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &1299205781026656705
 GameObject:
@@ -3546,12 +3651,12 @@ GameObject:
   - component: {fileID: 90983267705299757}
   - component: {fileID: 3104143281748580400}
   - component: {fileID: 6196666460553974345}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01_rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1934257570751136274
 Transform:
@@ -3817,12 +3922,12 @@ GameObject:
   - component: {fileID: 1792395129870696}
   - component: {fileID: 908594238668324622}
   - component: {fileID: 118221293603479272}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_pontoon_01.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &2531863012882535041
 GameObject:
@@ -4009,12 +4114,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3426955368759072422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgePontoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2664732707056564525
 Transform:
@@ -4207,12 +4312,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3226931034432731049}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeRockBroken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &2847273326939863665
 GameObject:
@@ -4223,12 +4328,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3226931034398499019}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeRockBroken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2945783877221817088
 Transform:
@@ -4536,12 +4641,12 @@ GameObject:
   - component: {fileID: 3502054991661209919}
   - component: {fileID: 5359978071810822151}
   - component: {fileID: 2599230510110971694}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3487730877778942775
 Transform:
@@ -4665,12 +4770,12 @@ GameObject:
   - component: {fileID: 3070104652221937194}
   - component: {fileID: 6303985448290816732}
   - component: {fileID: 9057886847014154139}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_rock_01.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &3952795368695548097
 GameObject:
@@ -4699,7 +4804,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6011650620552791136, guid: 90e6e3e05613b6942979075cfaf65038, type: 3}
 --- !u!4 &3977805568475283537
@@ -4710,8 +4815,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4359433562390928107}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 241.1, y: 9.7, z: 253.69}
-  m_LocalScale: {x: -0.02, y: -0.02, z: -0.02}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -0.02, y: -0.019999998, z: -0.019999998}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5441707638832337103}
@@ -4725,8 +4830,8 @@ Transform:
   - {fileID: 3201408572532357991}
   - {fileID: 2479279892565341378}
   - {fileID: 7134528957100920394}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 1506862396}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!4 &4023118353927511337
 Transform:
@@ -4882,6 +4987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3977805568475283537}
+  - component: {fileID: 4359433562390928108}
   m_Layer: 0
   m_Name: MyCharacter
   m_TagString: Untagged
@@ -4889,6 +4995,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &4359433562390928108
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359433562390928107}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4369336502383598413
 GameObject:
   m_ObjectHideFlags: 0
@@ -4977,12 +5099,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2133984520148181319}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgePontoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4670801202459367975
 Transform:
@@ -5390,12 +5512,12 @@ GameObject:
   - component: {fileID: 3056079789127946242}
   - component: {fileID: 8251830945774163815}
   - component: {fileID: 3964228102686732382}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bridge_hanging_01_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &6196666460553974345
 MeshRenderer:
@@ -5672,12 +5794,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5830364115658614048}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &6638518290943057134
 GameObject:
@@ -5979,12 +6101,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6291493911653915188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &7624612177355018745
 GameObject:
@@ -6208,12 +6330,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4393590718273093548}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeHanging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &8006971568341353862
 GameObject:
@@ -6374,12 +6496,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5335800224867384099}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeRockBroken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &8223626006083562132
 GameObject:
@@ -6390,12 +6512,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5335800224833154113}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeRockBroken (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!137 &8223659437999470215
 SkinnedMeshRenderer:
@@ -6505,7 +6627,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6153750925247674381}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

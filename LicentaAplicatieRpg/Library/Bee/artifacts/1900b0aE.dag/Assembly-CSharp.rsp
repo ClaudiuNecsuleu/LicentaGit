@@ -345,8 +345,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/CharacterController.cs"
 "Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/CTI_CustomWind.cs"
 "Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/CTI_Utils.cs"
+"Assets/MovementScript.cs"
 "Assets/Rocks and Boulders 2/Shaders/RotateGameObject.cs"
 "Assets/Water (Basic)/Scripts/WaterBasic.cs"
 -langversion:9.0
