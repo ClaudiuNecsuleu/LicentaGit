@@ -7,39 +7,60 @@ public class MovementScript : MonoBehaviour
 {
     public float speedCharacter = 1;
     public float speedRotation = 20;
+    public Transform myPlayerTransform;
 
-    float verticalLookRotation;
+    [SerializeField] float smoothTime;
+    Vector3 smoothMoveVelocity;
+    Vector3 moveAmount;
 
-    Transform targetToGo;
-    Transform myPlayerTransform;
+    Vector3 targetToGo;
+    Transform myObjectTransform;
     NavMeshAgent agent;
+    Camera myCamera;
+
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        myPlayerTransform = GetComponent<Transform>();
+        myObjectTransform = GetComponent<Transform>();
+        myCamera = Camera.main;
     }
 
     void Update()
     {
-        if (targetToGo != null)
+        if (targetToGo != Vector3.zero)
         {
-            agent.SetDestination(targetToGo.position);
+            if (Vector3.Distance(targetToGo, myObjectTransform.transform.position) <= 1)
+            {
+                //   Debug.Log("AGENT, STOP IT NOW");
+                agent.isStopped = true;
+
+                targetToGo = Vector3.zero;
+            }
         }
 
-        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") !=0)
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            myPlayerTransform.transform.position=new Vector3(myPlayerTransform.transform.position.x+Input.GetAxisRaw("Horizontal")*speedCharacter, myPlayerTransform.transform.position.y, myPlayerTransform.transform.position.z+ Input.GetAxisRaw("Vertical") * speedCharacter);
+            agent.isStopped = true;
+
+            Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), -Input.GetAxisRaw("Vertical"), 0).normalized;
+            moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? 2 * speedCharacter : speedCharacter), ref smoothMoveVelocity, 0);
+            myObjectTransform.position = myObjectTransform.position + myPlayerTransform.TransformDirection(moveAmount) * Time.deltaTime;
         }
 
         if (Input.GetMouseButton(1))
         {
-             myPlayerTransform.Rotate(new Vector3(Input.GetAxis("Mouse Y"),  Input.GetAxis("Mouse X"), 0) * Time.deltaTime * speedRotation);
-             myPlayerTransform.transform.LookAt(myPlayerTransform.transform.position + new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0));
+            myCamera.transform.RotateAround(myPlayerTransform.position, Vector3.up, Input.GetAxisRaw("Mouse X") * speedRotation * Time.deltaTime);
+            myPlayerTransform.transform.Rotate(0, 0, Input.GetAxisRaw("Mouse X") * speedRotation * Time.deltaTime);
         }
     }
 
+
     public void MovePlayerToDestination(Vector3 point)
     {
+        if (agent.isStopped == true)
+            agent.isStopped = false;
         agent.SetDestination(point);
+        targetToGo = point;
     }
 }

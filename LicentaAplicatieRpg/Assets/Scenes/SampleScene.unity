@@ -2034,8 +2034,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776b4a08e69c63142bd1c3d75b8286e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedCharacter: 1
+  speedCharacter: 10
   speedRotation: 100
+  myPlayerTransform: {fileID: 3977805568475283537}
+  smoothTime: 0
 --- !u!4 &1506862396
 Transform:
   m_ObjectHideFlags: 0

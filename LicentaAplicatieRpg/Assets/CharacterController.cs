@@ -36,6 +36,6 @@ public class CharacterController : MonoBehaviour
                Debug.Log("We hit " + hit.collider.name + "  ,point " + hit.point);
             }
         }
-       
+               
     }
 }
