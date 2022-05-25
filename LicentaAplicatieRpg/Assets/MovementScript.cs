@@ -63,4 +63,5 @@ public class MovementScript : MonoBehaviour
         agent.SetDestination(point);
         targetToGo = point;
     }
+
 }

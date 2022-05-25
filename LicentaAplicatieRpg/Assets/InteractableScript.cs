@@ -6,35 +6,35 @@ public class InteractableScript : MonoBehaviour
 {
     public float radius = 3f;
     public Transform interactionTransform;
+    [HideInInspector]
+    public bool playerWantToInteract = false;
 
     Transform player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     public virtual void Interact()
     {
-        //this method is meant to be overwritten
-        Debug.Log("Interacting with " + transform.name);
+         Debug.Log("Interacting with " + transform.name);
     }
 
     void Update()
-    { 
-        if (interactionTransform != null)
+    {
+        if (playerWantToInteract == true)
         {
             float distance = Vector3.Distance(player.position, interactionTransform.position);
             if (distance <= radius)
             {
                 Interact();
-           
+                playerWantToInteract= false;
             }
         }
-    
     }
 
     void OnDrawGizmosSelected()
     {
-        if (interactionTransform == null)
-        {
-            interactionTransform = transform;
-        }
-
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(interactionTransform.position, radius);
     }

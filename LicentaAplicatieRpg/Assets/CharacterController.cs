@@ -29,20 +29,23 @@ public class CharacterController : MonoBehaviour
             }
         }
 
-        //interraction logic
         if (Input.GetMouseButtonDown(1))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100))
             {
-               Debug.Log("We hit " + hit.collider.name + "  ,point " + hit.point);
-
+                //  Debug.Log("We hit " + hit.collider.name + "  ,point " + hit.point);
+              
                 InteractableScript interactable = hit.collider.GetComponent<InteractableScript>();
+                if (interactable != null)
+                {
+                    playerMovement.MovePlayerToDestination(hit.point);
+                    interactable.playerWantToInteract = true;
+                }
 
             }
         }
-
 
     }
 }
