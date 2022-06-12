@@ -13,6 +13,7 @@ public class ItemPickUpInInventoryScript : InteractableScript
     void PickUp()
     {
         Debug.Log("Picking up item" + item.name);
+        InventoryScript.Instance.Add(item);
         Destroy(gameObject);
     }
 }

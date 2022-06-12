@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SwordItem
   m_EditorClassIdentifier: 
   name: SwordOfGod
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: ee693ac6d82b69141a15e6a6e792e8dd, type: 3}
   isStandardItem: 0

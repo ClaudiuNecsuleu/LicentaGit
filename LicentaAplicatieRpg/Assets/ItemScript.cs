@@ -8,12 +8,27 @@ using UnityEngine;
     {
         new public string name = "New Item";
         public Sprite icon = null;
-        public bool isStandardItem = false;
         public virtual void Use()
         {
             Debug.Log("Using" + name);
         }
 
+    public void removeItemFromStandardInventory()
+    {
+        InventoryScript.Instance.RemoveFromStandardInventory(this);
     }
+
+    public void moveItemtoEquipInventory()
+    {
+        InventoryScript.Instance.AddToEquipInventory(this);
+    }
+
+    public void addToCurrentEquipment(EquipmentScript equipment)
+    {
+        EquipmentManager.instance.currentEquipment[(int)equipment.equipSlot]=equipment;
+        Debug.Log("equip");       
+    }
+
+}
 
 
