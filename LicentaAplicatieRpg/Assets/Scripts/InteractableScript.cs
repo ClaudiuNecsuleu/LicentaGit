@@ -9,7 +9,7 @@ public class InteractableScript : MonoBehaviour
     [HideInInspector]
     public bool playerWantToInteract = false;
 
-    Transform player;
+   Transform player;
 
     private void Start()
     {
