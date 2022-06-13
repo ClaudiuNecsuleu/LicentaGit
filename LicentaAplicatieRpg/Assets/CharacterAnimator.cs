@@ -31,13 +31,12 @@ public class CharacterAnimator : MonoBehaviour
             speedPercent = agent.velocity.magnitude / agent.speed;
 
         }
-        else {
-            var vel = rb.velocity;      //to get a Vector3 representation of the velocity
-            float speed = vel.magnitude;
-          //  float speed = Vector3.Distance(lastPosition.position,rb.transform.position ) *100;
-            lastPosition = rb.transform;
-            speedPercent =1f;
-            Debug.Log("speed " + speed+"    "+ rb.transform.position+"      " + lastPosition.position);
+        else
+        {
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                speedPercent = 0.75f;
+            }
         }
         animator.SetFloat("speed", speedPercent, locomitionAnimationSmoot, Time.deltaTime);
     }

@@ -13,6 +13,7 @@ public class EquipmentManager : MonoBehaviour
     }
     #endregion
     public GameObject[] myMeshes;
+    public GameObject[] myMeshesDefault;
 
     [HideInInspector]
     public EquipmentScript[] currentEquipment = new EquipmentScript[5];
@@ -44,6 +45,10 @@ public class EquipmentManager : MonoBehaviour
     }
     public void showMesh(EquipmentSlot slot) {
         myMeshes[(int)slot].SetActive(true);
+       // Debug.Log("slot "+(int)slot);
+        if((int)slot < 3)
+            myMeshesDefault[(int)slot].SetActive(false);
+        
     }
 
 }

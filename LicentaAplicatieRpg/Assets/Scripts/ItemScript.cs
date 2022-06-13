@@ -26,7 +26,12 @@ using UnityEngine;
     public void addToCurrentEquipment(EquipmentScript equipment)
     {
         EquipmentManager.instance.currentEquipment[(int)equipment.equipSlot]=equipment;
-        Debug.Log("equip");       
+        CharacterStats.Instance.damage.AddEquipment((float)equipment.damageModifier);
+        CharacterStats.Instance.armour.AddEquipment((float)equipment.armorModifier);
+        CharacterStats.Instance.onItemChangeStatusCallMe.Invoke();
+
+
+       Debug.Log("equip     "+ equipment.armorModifier);       
     }
 
 }
