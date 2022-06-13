@@ -23,17 +23,23 @@ public class CharacterStats : MonoBehaviour
     public Stat damage =new Stat();
     [HideInInspector]
     public Stat armour = new Stat();
-    float healt;
+    [HideInInspector]
+    public float health;
+    [HideInInspector]
+    public float maxHealth = 100;
     void Start()
     {
         damage.value = 0;
-        armour.value = 1;
-        healt = 100;
+        armour.value = 0;
+        health = maxHealth;
         onItemChangeStatusCallMe.Invoke();
     }
 
     public delegate void OnItemChangeStatus();
     public OnItemChangeStatus onItemChangeStatusCallMe;
+
+    public delegate void OnHealthChangeStatus();
+    public OnItemChangeStatus onHealthChangeStatusCallMe;
 
     void Update()
     {
@@ -46,12 +52,14 @@ public class CharacterStats : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         dmg -= armour.value;
-        healt -= dmg;
+        health -= dmg;
         dmg = Mathf.Clamp(dmg, 0, 100);
 
-        Debug.Log(transform.name + " take damage " + dmg  +"       helat "+ healt);
+        Debug.Log(transform.name + " take damage " + dmg  +"       helat "+ health);
 
-        if (healt <= 0)
+        onHealthChangeStatusCallMe.Invoke();
+
+        if (health <= 0)
         {
             Die();
         }
