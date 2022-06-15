@@ -28,7 +28,7 @@ public class CharacterController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100, layerMaskMovement))
             {
-                playerMovement.MovePlayerToDestination(hit.point);
+                playerMovement.MovePlayerToDestination(hit.point,null);
             }
         }
 
@@ -43,7 +43,7 @@ public class CharacterController : MonoBehaviour
                 InteractableScript interactable = hit.collider.GetComponent<InteractableScript>();
                 if (interactable != null)
                 {
-                    playerMovement.MovePlayerToDestination(hit.point);
+                    playerMovement.MovePlayerToDestination(hit.point,interactable);
                     interactable.playerWantToInteract = true;
                 }
 

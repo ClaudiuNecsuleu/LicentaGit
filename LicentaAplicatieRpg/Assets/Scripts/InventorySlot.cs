@@ -26,12 +26,6 @@ public class InventorySlot : MonoBehaviour
         InventoryScript.Instance.RemoveFromStandardInventory(item); 
     }
 
-    public void UseButtonFromEquipedInventory()
-    {
-        InventoryScript.Instance.RemoveFromEquipedInventory(item);
-        EquipmentManager.instance.RemoveItemFromEquip();
-
-    }
 
     public void UseItem()
     {

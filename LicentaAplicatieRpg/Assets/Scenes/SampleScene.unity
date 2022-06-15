@@ -2181,14 +2181,14 @@ PrefabInstance:
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1033611472}
+      objectReference: {fileID: 11400000, guid: bb5e56115e365bd41864468323b40a6b, type: 2}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UseButtonFromEquipedInventory
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InventorySlot, Assembly-CSharp
+      value: EquipmentScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4239,7 +4239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d1697c7c39d2545887c7da99ca7b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 2
   interactionTransform: {fileID: 917603686}
   playerWantToInteract: 0
   item: {fileID: 11400000, guid: cb063afb8fe9e3d40b95903c9166571a, type: 2}
@@ -4451,17 +4451,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8456779268978196888, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
   m_PrefabInstance: {fileID: 1917203215}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &953412939 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 874607826453212417, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
-  m_PrefabInstance: {fileID: 1917203215}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f20fabcb9406ec4f99100bddd90b9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &953909754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5070,17 +5059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1033611472 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 874607826453212417, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
-  m_PrefabInstance: {fileID: 259627864}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f20fabcb9406ec4f99100bddd90b9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1060221986 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8774040385358990773, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
@@ -5339,7 +5317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d1697c7c39d2545887c7da99ca7b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 2
   interactionTransform: {fileID: 1164488828}
   playerWantToInteract: 0
   item: {fileID: 11400000, guid: 2ecd19310b605934287347cd9f94c832, type: 2}
@@ -5824,17 +5802,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8456779268978196888, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
   m_PrefabInstance: {fileID: 1644385758}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1259854966 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 874607826453212417, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
-  m_PrefabInstance: {fileID: 1644385758}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f20fabcb9406ec4f99100bddd90b9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1261448920
 GameObject:
   m_ObjectHideFlags: 0
@@ -6525,7 +6492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d1697c7c39d2545887c7da99ca7b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 2
   interactionTransform: {fileID: 1316950205}
   playerWantToInteract: 0
   item: {fileID: 11400000, guid: bb5e56115e365bd41864468323b40a6b, type: 2}
@@ -6663,7 +6630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d1697c7c39d2545887c7da99ca7b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 2
   interactionTransform: {fileID: 1377424705}
   playerWantToInteract: 0
   item: {fileID: 11400000, guid: 08f8391b95b7cea4e9d7f68cf2793974, type: 2}
@@ -6726,14 +6693,14 @@ PrefabInstance:
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1583378848}
+      objectReference: {fileID: 11400000, guid: 873dc45eb1dfb8047be05d713814725e, type: 2}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UseButtonFromEquipedInventory
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InventorySlot, Assembly-CSharp
+      value: EquipmentScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -7477,17 +7444,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8456779268978196888, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
   m_PrefabInstance: {fileID: 1378373550}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1583378848 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 874607826453212417, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
-  m_PrefabInstance: {fileID: 1378373550}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f20fabcb9406ec4f99100bddd90b9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1607317836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7518,14 +7474,14 @@ PrefabInstance:
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1857253031}
+      objectReference: {fileID: 11400000, guid: cb063afb8fe9e3d40b95903c9166571a, type: 2}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UseButtonFromEquipedInventory
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InventorySlot, Assembly-CSharp
+      value: EquipmentScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -7750,7 +7706,7 @@ PrefabInstance:
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1259854966}
+      objectReference: {fileID: 11400000, guid: 08f8391b95b7cea4e9d7f68cf2793974, type: 2}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -7761,7 +7717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InventorySlot, Assembly-CSharp
+      value: EquipmentScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -8733,7 +8689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d1697c7c39d2545887c7da99ca7b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 2
   interactionTransform: {fileID: 1840045931}
   playerWantToInteract: 0
   item: {fileID: 11400000, guid: 873dc45eb1dfb8047be05d713814725e, type: 2}
@@ -8794,17 +8750,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3390516122383414810, guid: 6107120d619215641ab3dba22c9a351a, type: 3}
   m_PrefabInstance: {fileID: 953909754}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1857253031 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 874607826453212417, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
-  m_PrefabInstance: {fileID: 1607317836}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f20fabcb9406ec4f99100bddd90b9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1886236585 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3390516122383414810, guid: 6107120d619215641ab3dba22c9a351a, type: 3}
@@ -8840,14 +8785,14 @@ PrefabInstance:
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 953412939}
+      objectReference: {fileID: 11400000, guid: 2ecd19310b605934287347cd9f94c832, type: 2}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UseButtonFromEquipedInventory
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InventorySlot, Assembly-CSharp
+      value: EquipmentScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1046764687851356369, guid: 304ecc91a4f3e144e8f69427b029400b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -11651,7 +11596,7 @@ GameObject:
   - component: {fileID: 958541686}
   m_Layer: 0
   m_Name: MyPlayer
-  m_TagString: Untagged
+  m_TagString: PlayerCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16681,6 +16626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc325089d82598469e111a55798e958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &5908896640163843419
 GameObject:
   m_ObjectHideFlags: 0

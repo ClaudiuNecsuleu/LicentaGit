@@ -12,6 +12,7 @@ public class EnemyScript : InteractableScript
         Debug.Log("Interact with enemy");
         EnemyInteract enemy= GetComponent<EnemyInteract>();
         enemy.Attack();
+       // enemy.FaceToTarget();
 
     }
 }

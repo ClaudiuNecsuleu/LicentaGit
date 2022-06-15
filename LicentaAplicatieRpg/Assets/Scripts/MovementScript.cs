@@ -9,6 +9,8 @@ public class MovementScript : MonoBehaviour
     public float speedRotation = 20;
     public Transform myPlayerTransform;
 
+    InteractableScript interactable;
+
     [SerializeField] float smoothTime;
     Vector3 smoothMoveVelocity;
     Vector3 moveAmount;
@@ -30,12 +32,15 @@ public class MovementScript : MonoBehaviour
     {
         if (targetToGo != Vector3.zero)
         {
-            if (Vector3.Distance(targetToGo, myObjectTransform.transform.position) <= 1)
+            if(interactable!=null)
+            if (Vector3.Distance(targetToGo, myObjectTransform.transform.position) <= interactable.radius)
             {
                 //   Debug.Log("AGENT STOP");
                 agent.isStopped = true;
 
                 targetToGo = Vector3.zero;
+
+                interactable = null;
             }
         }
 
@@ -56,12 +61,13 @@ public class MovementScript : MonoBehaviour
     }
 
 
-    public void MovePlayerToDestination(Vector3 point)
+    public void MovePlayerToDestination(Vector3 point,InteractableScript interact)
     {
         if (agent.isStopped == true)
             agent.isStopped = false;
         agent.SetDestination(point);
         targetToGo = point;
+        interactable = interact;
     }
 
 }

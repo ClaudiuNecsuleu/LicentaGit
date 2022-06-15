@@ -30,16 +30,16 @@ public class EquipmentManager : MonoBehaviour
                 showMesh(equipment.equipSlot);
         }
     }
-    public void RemoveItemFromEquip() {
+    public void RemoveItemFromEquip(EquipmentScript equip) {
 
         for (int i = 0; i < currentEquipment.Length; i++)
         {
-            if (currentEquipment[i] != null)
+            if (currentEquipment[i] == equip)
             {
-                Debug.Log("enter" + (int)currentEquipment[i].equipSlot);
                 myMeshes[(int)currentEquipment[i].equipSlot].SetActive(false);
-                Debug.Log((int)currentEquipment[i].equipSlot + " jaa" + i);
                 currentEquipment[i] = null;
+                if ((int)equip.equipSlot < 3)
+                    myMeshesDefault[(int)equip.equipSlot].SetActive(true);
             }
         }
     }

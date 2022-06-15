@@ -19,6 +19,16 @@ public class EquipmentScript : ItemScript
         addToCurrentEquipment(this);
     }
 
+    public void UseButtonFromEquipedInventory()
+    {
+        CharacterStats.Instance.damage.RemoveModifier((float)this.damageModifier);
+        CharacterStats.Instance.armour.RemoveModifier((float)this.armorModifier);
+        CharacterStats.Instance.onItemChangeStatusCallMe.Invoke();
+
+        InventoryScript.Instance.RemoveFromEquipedInventory(this);
+        EquipmentManager.instance.RemoveItemFromEquip(this);
+        Debug.Log("remove item");
+    }
 
 }
 public enum EquipmentSlot { Head, Chest, Legs, Weapon, Shield, Feet , None }
