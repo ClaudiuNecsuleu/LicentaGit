@@ -32,16 +32,20 @@ public class MovementScript : MonoBehaviour
     {
         if (targetToGo != Vector3.zero)
         {
-            if(interactable!=null)
-            if (Vector3.Distance(targetToGo, myObjectTransform.transform.position) <= interactable.radius)
+            if (interactable != null)
             {
-                //   Debug.Log("AGENT STOP");
-                agent.isStopped = true;
+                FaceToTarget();
+                if (Vector3.Distance(targetToGo, myObjectTransform.transform.position) <= interactable.radius)
+                {
+                    //   Debug.Log("AGENT STOP");
+                    agent.isStopped = true;
 
-                targetToGo = Vector3.zero;
+                    targetToGo = Vector3.zero;
 
-                interactable = null;
+                    interactable = null;
+                }
             }
+            
         }
 
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
@@ -68,6 +72,14 @@ public class MovementScript : MonoBehaviour
         agent.SetDestination(point);
         targetToGo = point;
         interactable = interact;
+    }
+
+    public void FaceToTarget()
+    {
+        Vector3 direction = (interactable.transform.position - transform.position).normalized;
+        Quaternion lookRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.z));
+        myPlayerTransform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 1f); //smout
+
     }
 
 }

@@ -9,6 +9,7 @@ public class EnemyInteract : MonoBehaviour
     Animator animatorPlayer;
     Animator animatorEnemy;
     EnemyHealthDesign enemyHealthDesign;
+    [HideInInspector]
     public Transform target;
    void Start()
     {
@@ -31,7 +32,8 @@ public class EnemyInteract : MonoBehaviour
         if (health < 0) {
             Debug.Log("Death");
             animatorPlayer.SetBool("attack", false);
-            Destroy(gameObject);
+            animatorEnemy.SetTrigger("Die");
+            Destroy(gameObject,4);
         }
         if (Vector3.Distance(target.position, transform.position) <=6)
         {

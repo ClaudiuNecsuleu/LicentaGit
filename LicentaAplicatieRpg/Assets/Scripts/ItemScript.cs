@@ -8,9 +8,18 @@ using UnityEngine;
     {
         new public string name = "New Item";
         public Sprite icon = null;
+
+        public ItemType itemType;
         public virtual void Use()
         {
             Debug.Log("Using" + name);
+        if (itemType == ItemType.Potions)
+           {
+            removeItemFromStandardInventory();
+            CharacterStats.Instance.health += 25;
+            CharacterStats.Instance.onHealthChangeStatusCallMe();
+            Debug.Log("30 health added");
+           }    
         }
 
     public void removeItemFromStandardInventory()
@@ -33,6 +42,8 @@ using UnityEngine;
 
        Debug.Log("equip     "+ equipment.armorModifier);       
     }
+
+    public enum ItemType { None,  Potions, Ticket , Equipment }
 
 }
 

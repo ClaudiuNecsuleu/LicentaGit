@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Shield
   icon: {fileID: 21300000, guid: 36e67791102c64a499ff3f959242463c, type: 3}
+  itemType: 3
   equipSlot: 4
   armorModifier: 15
   damageModifier: 0
