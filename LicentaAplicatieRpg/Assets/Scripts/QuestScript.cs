@@ -20,6 +20,9 @@ public class QuestScript : InteractableScript
     public float numberOfPrefab;
     public GameObject prefab;
 
+    public GameObject[] rewards;
+
+    [HideInInspector]
     public static QuestScript instance;
 
     public QuestType questType;

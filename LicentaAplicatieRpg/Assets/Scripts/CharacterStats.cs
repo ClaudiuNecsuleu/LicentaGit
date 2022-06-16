@@ -26,6 +26,7 @@ public class CharacterStats : MonoBehaviour
     public float health;
     [HideInInspector]
     public float maxHealth = 100;
+    public Transform respawn;
     void Start()
     {
         damage.value = 0;
@@ -66,5 +67,7 @@ public class CharacterStats : MonoBehaviour
     public virtual void Die()
     {
         Debug.Log(transform.name + " died ");
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position=respawn.position;
+        health = 10;
     }
 }

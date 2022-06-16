@@ -20,10 +20,15 @@ public class ActiveQuest : MonoBehaviour
     bool questInProgress;
     GameObject prefab;
     public GameObject infoPanel;
+    [HideInInspector]
+    public GameObject[] rewards;
+    public GameObject rewardPoint;
+    [HideInInspector]
     public TextMeshProUGUI[] texts;
     Transform player;
     float lastTime;
     QuestType questType=QuestType.None;
+
     void Start()
     {
         texts = infoPanel.GetComponentsInChildren<TextMeshProUGUI>();
@@ -46,20 +51,32 @@ public class ActiveQuest : MonoBehaviour
             if (Vector3.Distance(prefab.transform.position, player.position) <= 2)
             {
                 Destroy(prefab, 2);
-                texts[0].text = "Complete!";
+                texts[0].text = "Complete! Pick up your reward!";
                 texts[1].text = "";
                 lastTime = Time.time;
                 questType = QuestType.None;
+                foreach (GameObject go in rewards)
+                {
+                    go.SetActive(true);
+                    go.transform.position = rewardPoint.transform.position;
+                }
+                questInProgress = false;
             }
 
         if (questType == QuestType.Kill)
         {
             if (prefab == null)
             {
-                texts[0].text = "Complete!";
+                texts[0].text = "Complete! Pick up your reward!";
                 texts[1].text = "";
                 lastTime = Time.time;
                 questType = QuestType.None;
+                foreach (GameObject go in rewards)
+                {
+                    go.SetActive(true);
+                    go.transform.position = rewardPoint.transform.position;
+                }
+                questInProgress = false;
             }
         }
 
@@ -79,7 +96,7 @@ public class ActiveQuest : MonoBehaviour
         questType = quest.questType;
         texts[0].text = quest.title;
         texts[1].text = quest.numberOfPrefab.ToString();
-
+        rewards=quest.rewards;
         infoPanel.SetActive(true);
         // Debug.Log("start quest");
     }

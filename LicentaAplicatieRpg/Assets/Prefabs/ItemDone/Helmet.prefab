@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3546069156633630981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3546069156633630976}
+  - component: {fileID: 3546069156633630983}
+  - component: {fileID: 3546069156633630982}
+  m_Layer: 0
+  m_Name: Helmet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3546069156633630976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3546069156633630981}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.950714, y: 1.2377396, z: -1.5826263}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8334301976378733647}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3546069156633630983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3546069156633630981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d1697c7c39d2545887c7da99ca7b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2
+  interactionTransform: {fileID: 3546069156633630976}
+  playerWantToInteract: 0
+  item: {fileID: 11400000, guid: 2ecd19310b605934287347cd9f94c832, type: 2}
+--- !u!65 &3546069156633630982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3546069156633630981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.4, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &3546069157712749176
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3546069156633630976}
+    m_Modifications:
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -4.5489898e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 2.2301135e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197173891394837114, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_Name
+      value: HelmetMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197173891394837114, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+--- !u!4 &8334301976378733647 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4800635313519859255, guid: 0a222036abc6aaf40b05e39ebaa07bdb, type: 3}
+  m_PrefabInstance: {fileID: 3546069157712749176}
+  m_PrefabAsset: {fileID: 0}
