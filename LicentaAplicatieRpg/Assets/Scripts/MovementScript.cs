@@ -39,20 +39,17 @@ public class MovementScript : MonoBehaviour
                 {
                     //   Debug.Log("AGENT STOP");
                     agent.isStopped = true;
-
                     targetToGo = Vector3.zero;
-
                     interactable = null;
                 }
             }
-            
         }
 
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
             agent.isStopped = true;
 
-            Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical")).normalized;
+            Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
             moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? 2 * speedCharacter : speedCharacter), ref smoothMoveVelocity, 0);
             myObjectTransform.position = myObjectTransform.position + myPlayerTransform.TransformDirection(moveAmount) * Time.deltaTime;
         }
@@ -61,11 +58,12 @@ public class MovementScript : MonoBehaviour
         {
             myCamera.transform.RotateAround(myPlayerTransform.position, Vector3.up, Input.GetAxisRaw("Mouse X") * speedRotation * Time.deltaTime);
             myPlayerTransform.transform.Rotate(0, Input.GetAxisRaw("Mouse X") * speedRotation * Time.deltaTime, 0);
+            GetComponent<Transform>().transform.Rotate(0, -myPlayerTransform.rotation.y, 0);
         }
     }
 
 
-    public void MovePlayerToDestination(Vector3 point,InteractableScript interact)
+    public void MovePlayerToDestination(Vector3 point, InteractableScript interact)
     {
         if (agent.isStopped == true)
             agent.isStopped = false;
@@ -78,8 +76,7 @@ public class MovementScript : MonoBehaviour
     {
         Vector3 direction = (interactable.transform.position - transform.position).normalized;
         Quaternion lookRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.z));
-        myPlayerTransform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 1f); //smout
-
+        myPlayerTransform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 1f); 
     }
 
 }

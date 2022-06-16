@@ -36,12 +36,10 @@ public class InventoryScript : MonoBehaviour
         items.Add(item);
         if (onItemChangeCallMe != null)
             onItemChangeCallMe.Invoke();
-
     }
 
     public void AddToEquipInventory(ItemScript item)
     {
-
         if (itemsEquip.Count >= spaceEquip)
         {
             Debug.Log("Not space");
@@ -64,7 +62,7 @@ public class InventoryScript : MonoBehaviour
         itemsEquip.Remove((EquipmentScript)item);
         items.Add(item);
         if (onItemChangeCallMe != null)
-         onItemChangeCallMe.Invoke();
+            onItemChangeCallMe.Invoke();
     }
 }
 

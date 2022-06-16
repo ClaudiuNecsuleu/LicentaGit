@@ -18,9 +18,8 @@ public class CharacterStats : MonoBehaviour
     }
     #endregion
 
-
     [HideInInspector]
-    public Stat damage =new Stat();
+    public Stat damage = new Stat();
     [HideInInspector]
     public Stat armour = new Stat();
     [HideInInspector]
@@ -45,7 +44,7 @@ public class CharacterStats : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.T))
         {
-            TakeDamage(10);
+            //  TakeDamage(10);
         }
     }
 
@@ -55,7 +54,7 @@ public class CharacterStats : MonoBehaviour
         health -= dmg;
         dmg = Mathf.Clamp(dmg, 0, 100);
 
-        Debug.Log(transform.name + " take damage " + dmg  +"       helat "+ health);
+        //Debug.Log(transform.name + " take damage " + dmg  +"       helat "+ health);
 
         onHealthChangeStatusCallMe.Invoke();
 
@@ -64,7 +63,6 @@ public class CharacterStats : MonoBehaviour
             Die();
         }
     }
-
     public virtual void Die()
     {
         Debug.Log(transform.name + " died ");

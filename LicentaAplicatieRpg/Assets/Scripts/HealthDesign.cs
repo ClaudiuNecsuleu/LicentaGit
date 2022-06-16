@@ -11,21 +11,19 @@ public class HealthDesign : MonoBehaviour
     {
         CharacterStats.Instance.onHealthChangeStatusCallMe += ChangeHealth;
     }
-
     void Update()
     {
-            if ((Time.time - lastTime) > 5)
-            { 
+        if ((Time.time - lastTime) > 5)
+        {
             this.gameObject.SetActive(false);
-            }
-        
+        }
     }
 
-    public void ChangeHealth() {
+    public void ChangeHealth()
+    {
         Debug.Log("health UI change");
         this.gameObject.SetActive(true);
-        healthImg.fillAmount = CharacterStats.Instance.health/ CharacterStats.Instance.maxHealth;
+        healthImg.fillAmount = CharacterStats.Instance.health / CharacterStats.Instance.maxHealth;
         lastTime = Time.time;
-        
     }
 }

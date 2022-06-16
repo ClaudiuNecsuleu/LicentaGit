@@ -8,8 +8,9 @@ public class Stat
 
     private List<float> equipments = new List<float>();
 
-    public float CalculateValue() {
-        value= 0;
+    public float CalculateValue()
+    {
+        value = 0;
         foreach (var equip in equipments)
         {
             value += equip;
@@ -23,7 +24,6 @@ public class Stat
             equipments.Add(modifier);
         }
     }
-
     public void RemoveModifier(float modifier)
     {
         if (modifier != 0)

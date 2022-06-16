@@ -20,15 +20,15 @@ public class InventoryDesignScript : MonoBehaviour
         slots = itemParent.GetComponentsInChildren<InventorySlot>();
         slotsEquip = itemParentEquiped.GetComponentsInChildren<InventorySlot>();
     }
-
-    void Update()
+    private void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            inventoryUI.SetActive(!inventoryUI.activeSelf);
+        }
     }
-
     void UpdateUI()
     {
-  
         for (int i = 0; i < slots.Length; i++)
         {
             if (i < inventory.items.Count)
@@ -52,8 +52,8 @@ public class InventoryDesignScript : MonoBehaviour
                     wasEquip = true;
                 }
             }
-            if(!wasEquip)
-            slotsEquip[j].ClearSlot();
+            if (!wasEquip)
+                slotsEquip[j].ClearSlot();
         }
 
         Debug.Log("UPDATING UI");

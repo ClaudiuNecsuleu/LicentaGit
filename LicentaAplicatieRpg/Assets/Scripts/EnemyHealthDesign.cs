@@ -7,20 +7,13 @@ public class EnemyHealthDesign : MonoBehaviour
 {
     public Image healthImg;
     float lastTime;
-    void Start()
-    {
-      
-    }
-
     void Update()
     {
         if ((Time.time - lastTime) > 5)
         {
             this.gameObject.SetActive(false);
         }
-
     }
-
     public void ChangeHealth()
     {
         Debug.Log("health UI enemy change");

@@ -7,19 +7,20 @@ public class StatusDesign : MonoBehaviour
 {
     public TextMeshProUGUI damage;
     public TextMeshProUGUI armour;
+    public GameObject ui;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ui.SetActive(!ui.activeSelf);
+        }
+
+    }
     void Start()
     {
         CharacterStats.Instance.onItemChangeStatusCallMe += StatusUpdateUI;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-       // damage.text = 1.ToString();
-       // armour.text = 1.ToString();
-    }
-
     public void StatusUpdateUI()
     {
         damage.text = CharacterStats.Instance.damage.CalculateValue().ToString();

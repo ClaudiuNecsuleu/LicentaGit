@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class InventorySlot : MonoBehaviour
 {
-
     ItemScript item;
     public Image icon;
     public EquipmentSlot slotDestionation;
@@ -11,7 +10,7 @@ public class InventorySlot : MonoBehaviour
     public void AddItem(ItemScript newItem)
     {
         item = newItem;
-        icon.sprite=item.icon;
+        icon.sprite = item.icon;
         icon.enabled = true;
     }
 
@@ -19,11 +18,12 @@ public class InventorySlot : MonoBehaviour
     {
         item = null;
         icon.sprite = null;
-        icon.enabled=false;
+        icon.enabled = false;
     }
 
-    public void UseButtonFromStandardInventory() {
-        InventoryScript.Instance.RemoveFromStandardInventory(item); 
+    public void UseButtonFromStandardInventory()
+    {
+        InventoryScript.Instance.RemoveFromStandardInventory(item);
     }
 
 

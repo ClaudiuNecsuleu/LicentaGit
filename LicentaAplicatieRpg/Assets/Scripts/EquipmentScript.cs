@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Equipment", menuName = "Inventory/Equipment")]
 public class EquipmentScript : ItemScript
 {
-
     public EquipmentSlot equipSlot;
 
     public int armorModifier;
@@ -31,6 +30,6 @@ public class EquipmentScript : ItemScript
     }
 
 }
-public enum EquipmentSlot { Head, Chest, Legs, Weapon, Shield, Feet , None }
+public enum EquipmentSlot { Head, Chest, Legs, Weapon, Shield, Feet, None }
 
 

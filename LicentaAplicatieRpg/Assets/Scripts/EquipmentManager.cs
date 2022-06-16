@@ -18,10 +18,6 @@ public class EquipmentManager : MonoBehaviour
     [HideInInspector]
     public EquipmentScript[] currentEquipment = new EquipmentScript[5];
 
-    private void Start()
-    {
-    }
-
     public void Update()
     {
         foreach (var equipment in currentEquipment)
@@ -30,8 +26,8 @@ public class EquipmentManager : MonoBehaviour
                 showMesh(equipment.equipSlot);
         }
     }
-    public void RemoveItemFromEquip(EquipmentScript equip) {
-
+    public void RemoveItemFromEquip(EquipmentScript equip)
+    {
         for (int i = 0; i < currentEquipment.Length; i++)
         {
             if (currentEquipment[i] == equip)
@@ -43,12 +39,12 @@ public class EquipmentManager : MonoBehaviour
             }
         }
     }
-    public void showMesh(EquipmentSlot slot) {
+    public void showMesh(EquipmentSlot slot)
+    {
         myMeshes[(int)slot].SetActive(true);
-       // Debug.Log("slot "+(int)slot);
-        if((int)slot < 3)
+        // Debug.Log("slot "+(int)slot);
+        if ((int)slot < 3)
             myMeshesDefault[(int)slot].SetActive(false);
-        
     }
 
 }

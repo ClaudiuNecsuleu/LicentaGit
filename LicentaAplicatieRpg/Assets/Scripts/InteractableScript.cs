@@ -9,15 +9,14 @@ public class InteractableScript : MonoBehaviour
     [HideInInspector]
     public bool playerWantToInteract = false;
 
-   Transform player;
-
+    Transform player;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     public virtual void Interact()
     {
-         Debug.Log("Interacting with " + transform.name);
+        Debug.Log("Interacting with " + transform.name);
     }
 
     void Update()
@@ -28,7 +27,7 @@ public class InteractableScript : MonoBehaviour
             if (distance <= radius)
             {
                 Interact();
-                playerWantToInteract= false;
+                playerWantToInteract = false;
             }
         }
     }

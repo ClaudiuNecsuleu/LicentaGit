@@ -8,10 +8,7 @@ public class CharacterController : MonoBehaviour
     Camera cam;
     MovementScript playerMovement;
     public LayerMask layerMaskMovement;
-
     public InteractableScript focus;
-
-
     void Start()
     {
         cam = Camera.main;
@@ -28,7 +25,7 @@ public class CharacterController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100, layerMaskMovement))
             {
-                playerMovement.MovePlayerToDestination(hit.point,null);
+                playerMovement.MovePlayerToDestination(hit.point, null);
             }
         }
 
@@ -39,14 +36,12 @@ public class CharacterController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100))
             {
                 //  Debug.Log("We hit " + hit.collider.name + "  ,point " + hit.point);
-              
                 InteractableScript interactable = hit.collider.GetComponent<InteractableScript>();
                 if (interactable != null)
                 {
-                    playerMovement.MovePlayerToDestination(hit.point,interactable);
+                    playerMovement.MovePlayerToDestination(hit.point, interactable);
                     interactable.playerWantToInteract = true;
                 }
-
             }
         }
 

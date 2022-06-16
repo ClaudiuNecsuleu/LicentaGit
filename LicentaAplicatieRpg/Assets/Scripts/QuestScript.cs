@@ -20,7 +20,7 @@ public class QuestScript : InteractableScript
     public float numberOfPrefab;
     public GameObject prefab;
 
-    bool status = false;
+    public static QuestScript instance;
 
     public QuestType questType;
     public override void Interact()
@@ -28,13 +28,14 @@ public class QuestScript : InteractableScript
         base.Interact();
         Debug.Log("Interact with NPC");
         ui.SetActive(true);
-        npcName.text = "NPC-ul "+ nameNpc + ", are nevoie de ajutorul tau!";
+        npcName.text = "NPC-ul " + nameNpc + ", are nevoie de ajutorul tau!";
         description.text = descr;
         questTitle.text = title;
-        status = true;
+        instance = this;
     }
 
-    public void TurnItOff() {
+    public void TurnItOff()
+    {
         ui.SetActive(false);
     }
 
@@ -42,13 +43,9 @@ public class QuestScript : InteractableScript
     {
         ui.SetActive(false);
         // Debug.Log("QuestAccepted");
-        if (status)
-        {
-            ActiveQuest.instance.quest = this.GetComponent<QuestScript>();
-            status= false;
-        }
+        ActiveQuest.instance.quest = instance;
     }
 
- 
+
 }
-public enum QuestType { Find, Kill }
+public enum QuestType { Find, Kill, None }
