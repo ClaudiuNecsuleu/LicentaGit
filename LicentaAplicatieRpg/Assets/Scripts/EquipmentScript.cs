@@ -28,6 +28,20 @@ public class EquipmentScript : ItemScript
         EquipmentManager.instance.RemoveItemFromEquip(this);
         Debug.Log("remove item");
     }
+    public void moveItemtoEquipInventory()
+    {
+        InventoryScript.Instance.AddToEquipInventory(this);
+    }
+
+    public void addToCurrentEquipment(EquipmentScript equipment)
+    {
+        EquipmentManager.instance.currentEquipment[(int)equipment.equipSlot] = equipment;
+        CharacterStats.Instance.damage.AddEquipment((float)equipment.damageModifier);
+        CharacterStats.Instance.armour.AddEquipment((float)equipment.armorModifier);
+        CharacterStats.Instance.onItemChangeStatusCallMe.Invoke();
+
+        Debug.Log("equip     " + equipment.armorModifier);
+    }
 
 }
 public enum EquipmentSlot { Head, Chest, Legs, Weapon, Shield, Feet, None }

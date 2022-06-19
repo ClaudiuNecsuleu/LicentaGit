@@ -15,11 +15,15 @@ public class ItemScript : ScriptableObject
         Debug.Log("Using" + name);
         if (itemType == ItemType.Potions)
         {
-            removeItemFromStandardInventory();
-            CharacterStats.Instance.health += 25;
-            CharacterStats.Instance.onHealthChangeStatusCallMe();
-            Debug.Log("30 health added");
+            UsePotion();
         }
+    }
+
+    public void UsePotion() {
+        removeItemFromStandardInventory();
+        CharacterStats.Instance.health += 25;
+        CharacterStats.Instance.onHealthChangeStatusCallMe();
+        Debug.Log("30 health added");
     }
 
     public void removeItemFromStandardInventory()
@@ -27,22 +31,7 @@ public class ItemScript : ScriptableObject
         InventoryScript.Instance.RemoveFromStandardInventory(this);
     }
 
-    public void moveItemtoEquipInventory()
-    {
-        InventoryScript.Instance.AddToEquipInventory(this);
-    }
-
-    public void addToCurrentEquipment(EquipmentScript equipment)
-    {
-        EquipmentManager.instance.currentEquipment[(int)equipment.equipSlot] = equipment;
-        CharacterStats.Instance.damage.AddEquipment((float)equipment.damageModifier);
-        CharacterStats.Instance.armour.AddEquipment((float)equipment.armorModifier);
-        CharacterStats.Instance.onItemChangeStatusCallMe.Invoke();
-
-
-        Debug.Log("equip     " + equipment.armorModifier);
-    }
-
+   
     public enum ItemType { None, Potions, Ticket, Equipment }
 
 }

@@ -1,21 +1,27 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ActiveQuest
+    - AudioScript
     - CharacterAnimator
     - CharacterController
     - CharacterStats
     - ConvertToRegularMesh
+    - EnemyHealthDesign
+    - EnemyInteract
     - EnemyScript
     - EquipmentManager
     - EquipmentScript
+    - GamePanelScript
     - HealthDesign
-    - InteractableScript
     - InventoryDesignScript
     - InventoryScript
     - InventorySlot
     - ItemPickUpInInventoryScript
     - ItemScript
     - MovementScript
+    - PetFallow
+    - PetScript
     - QuestScript
     - StatusDesign
     - UnityStandardAssets.Water.WaterBasic
@@ -64,6 +70,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
   serializedClasses:
     Unity.Postprocessing.Runtime:
     - UnityEngine.Rendering.PostProcessing.AmbientOcclusionModeParameter
@@ -123,6 +130,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
@@ -144,40 +152,22 @@ ScriptsOnlyBuild:
     fullTypeName: InventorySlot
     methodName: UseItem
   - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
+    fullTypeName: EquipmentScript
     methodName: UseButtonFromEquipedInventory
   - assembly: Assembly-CSharp
     fullTypeName: InventorySlot
     methodName: UseItem
   - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
+    fullTypeName: EquipmentScript
     methodName: UseButtonFromEquipedInventory
   - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
-    methodName: UseButtonFromEquipedInventory
-  - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
-    methodName: UseItem
-  - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
+    fullTypeName: EquipmentScript
     methodName: UseButtonFromEquipedInventory
   - assembly: Assembly-CSharp
     fullTypeName: InventorySlot
     methodName: UseItem
   - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
-    methodName: UseItem
-  - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
-    methodName: UseItem
-  - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
-    methodName: UseItem
-  - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
-    methodName: UseItem
-  - assembly: Assembly-CSharp
-    fullTypeName: InventorySlot
+    fullTypeName: EquipmentScript
     methodName: UseButtonFromEquipedInventory
   - assembly: Assembly-CSharp
     fullTypeName: InventorySlot
@@ -188,9 +178,48 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InventorySlot
     methodName: UseItem
+  - assembly: Assembly-CSharp
+    fullTypeName: InventorySlot
+    methodName: UseItem
+  - assembly: Assembly-CSharp
+    fullTypeName: InventorySlot
+    methodName: UseItem
+  - assembly: Assembly-CSharp
+    fullTypeName: EquipmentScript
+    methodName: UseButtonFromEquipedInventory
+  - assembly: Assembly-CSharp
+    fullTypeName: InventorySlot
+    methodName: UseItem
+  - assembly: Assembly-CSharp
+    fullTypeName: InventorySlot
+    methodName: UseItem
+  - assembly: Assembly-CSharp
+    fullTypeName: InventorySlot
+    methodName: UseItem
+  - assembly: Assembly-CSharp
+    fullTypeName: GamePanelScript
+    methodName: HelpButton
+  - assembly: Assembly-CSharp
+    fullTypeName: GamePanelScript
+    methodName: SaveOptionsBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: GamePanelScript
+    methodName: StartGame
+  - assembly: Assembly-CSharp
+    fullTypeName: GamePanelScript
+    methodName: OptionsButton
+  - assembly: Assembly-CSharp
+    fullTypeName: GamePanelScript
+    methodName: QuitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: GamePanelScript
+    methodName: BackButtonOptions
   - assembly: Assembly-CSharp
     fullTypeName: QuestScript
     methodName: AcceptQuest
+  - assembly: Assembly-CSharp
+    fullTypeName: GamePanelScript
+    methodName: BackButton
   - assembly: Assembly-CSharp
     fullTypeName: QuestScript
     methodName: TurnItOff
@@ -228,6 +257,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -245,77 +278,91 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1946}
     - Class: 114
-      Script: {instanceID: 2048}
+      Script: {instanceID: 1948}
     - Class: 114
-      Script: {instanceID: 2282}
+      Script: {instanceID: 2050}
     - Class: 114
-      Script: {instanceID: 2350}
+      Script: {instanceID: 2284}
     - Class: 114
-      Script: {instanceID: 2490}
+      Script: {instanceID: 2352}
     - Class: 114
-      Script: {instanceID: 2500}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2738}
+      Script: {instanceID: 2502}
     - Class: 114
-      Script: {instanceID: 2800}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 2962}
+      Script: {instanceID: 2802}
     - Class: 114
-      Script: {instanceID: 3158}
+      Script: {instanceID: 2964}
     - Class: 114
-      Script: {instanceID: 3262}
+      Script: {instanceID: 3160}
     - Class: 114
-      Script: {instanceID: 3304}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 4238}
+      Script: {instanceID: 3266}
     - Class: 114
-      Script: {instanceID: 4350}
+      Script: {instanceID: 3308}
     - Class: 114
-      Script: {instanceID: 4600}
+      Script: {instanceID: 3694}
     - Class: 114
-      Script: {instanceID: 4622}
+      Script: {instanceID: 4244}
     - Class: 114
-      Script: {instanceID: 4864}
+      Script: {instanceID: 4356}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 4606}
     - Class: 114
-      Script: {instanceID: 5020}
+      Script: {instanceID: 4628}
     - Class: 114
-      Script: {instanceID: 5056}
+      Script: {instanceID: 4870}
     - Class: 114
-      Script: {instanceID: 5084}
+      Script: {instanceID: 4910}
     - Class: 114
-      Script: {instanceID: 5376}
+      Script: {instanceID: 5026}
     - Class: 114
-      Script: {instanceID: 5392}
+      Script: {instanceID: 5062}
     - Class: 114
-      Script: {instanceID: 5478}
+      Script: {instanceID: 5090}
     - Class: 114
-      Script: {instanceID: 5834}
+      Script: {instanceID: 5296}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 5382}
     - Class: 114
-      Script: {instanceID: 6126}
+      Script: {instanceID: 5398}
     - Class: 114
-      Script: {instanceID: 6452}
+      Script: {instanceID: 5484}
     - Class: 114
-      Script: {instanceID: 6568}
+      Script: {instanceID: 5840}
     - Class: 114
-      Script: {instanceID: 7260}
+      Script: {instanceID: 5980}
     - Class: 114
-      Script: {instanceID: 7344}
+      Script: {instanceID: 6132}
     - Class: 114
-      Script: {instanceID: 7438}
+      Script: {instanceID: 6458}
     - Class: 114
-      Script: {instanceID: 7546}
+      Script: {instanceID: 6488}
     - Class: 114
-      Script: {instanceID: 7850}
+      Script: {instanceID: 6576}
     - Class: 114
-      Script: {instanceID: 8056}
+      Script: {instanceID: 7352}
     - Class: 114
-      Script: {instanceID: 8130}
+      Script: {instanceID: 7446}
     - Class: 114
-      Script: {instanceID: 8314}
+      Script: {instanceID: 7554}
+    - Class: 114
+      Script: {instanceID: 7858}
+    - Class: 114
+      Script: {instanceID: 7962}
+    - Class: 114
+      Script: {instanceID: 8066}
+    - Class: 114
+      Script: {instanceID: 8140}
+    - Class: 114
+      Script: {instanceID: 8324}
+    - Class: 114
+      Script: {instanceID: 54894}
+    - Class: 114
+      Script: {instanceID: 54900}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -339,6 +386,10 @@ ScriptsOnlyBuild:
     - Class: 195
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 205
       Script: {instanceID: 0}
@@ -447,7 +498,13 @@ ScriptsOnlyBuild:
     className: HealthDesign
   - hash:
       serializedVersion: 2
-      Hash: 63a3e5112033aba0e6a78b00b00d12b5
+      Hash: 39ea5d1f4e34bc5add505386401ff79a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GamePanelScript
+  - hash:
+      serializedVersion: 2
+      Hash: b240113245a5801c090334b6d1840515
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterStats
@@ -501,7 +558,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: f5975d17b22a27c321c9db8a64c917aa
+      Hash: c56815729d2008cf779034a72eae055d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EquipmentScript
@@ -651,6 +708,12 @@ ScriptsOnlyBuild:
     className: VertexShakeA
   - hash:
       serializedVersion: 2
+      Hash: ee17976e6c2881c4ac4d9072d93e520e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ActiveQuest
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -751,6 +814,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TextMeshProFloatingText
+  - hash:
+      serializedVersion: 2
+      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyInteract
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1113,7 +1182,7 @@ ScriptsOnlyBuild:
     className: DepthOfField
   - hash:
       serializedVersion: 2
-      Hash: 4c95031299d94a3f022e1ba4c29207a6
+      Hash: 51d41dde539f4373593932290b6b0620
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QuestScript
@@ -1231,6 +1300,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 18c152473ea259b38afa9f6b7c7a6966
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioScript
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1479,6 +1554,12 @@ ScriptsOnlyBuild:
     className: LensDistortion
   - hash:
       serializedVersion: 2
+      Hash: 901fefe85e62a84c9cb5d638b88d03a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyHealthDesign
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1503,7 +1584,7 @@ ScriptsOnlyBuild:
     className: TeleType
   - hash:
       serializedVersion: 2
-      Hash: 136c93388eaa17f260f1c5594e049ea5
+      Hash: e2ba8b3a4980fe694e7155d8f2aacf7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemScript
@@ -1551,7 +1632,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: d872319c6f6ca83844c174a12dac0747
+      Hash: 20bec623b759392a7dd15ae0de767949
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StatusDesign
@@ -1561,6 +1642,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: ed582867cd88347f001a87fc47f7a84f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PetFallow
+  - hash:
+      serializedVersion: 2
+      Hash: 81335fcac084d5b2c81f036bc65dfac6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PetScript
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

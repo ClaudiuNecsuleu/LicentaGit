@@ -32,6 +32,7 @@ public class InventoryScript : MonoBehaviour
         if (items.Count >= spaceStandard)
         {
             Debug.Log("Not space");
+            return;
         }
         items.Add(item);
         if (onItemChangeCallMe != null)
@@ -43,6 +44,7 @@ public class InventoryScript : MonoBehaviour
         if (itemsEquip.Count >= spaceEquip)
         {
             Debug.Log("Not space");
+            return;
         }
         itemsEquip.Add((EquipmentScript)item);
         if (onItemChangeCallMe != null)

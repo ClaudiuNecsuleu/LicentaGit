@@ -52,9 +52,9 @@ public class CharacterStats : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         dmg -= armour.value;
+        dmg = Mathf.Clamp(dmg, 0, maxHealth);
         health -= dmg;
-        dmg = Mathf.Clamp(dmg, 0, 100);
-
+        
         //Debug.Log(transform.name + " take damage " + dmg  +"       helat "+ health);
 
         onHealthChangeStatusCallMe.Invoke();
@@ -69,5 +69,6 @@ public class CharacterStats : MonoBehaviour
         Debug.Log(transform.name + " died ");
         GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position=respawn.position;
         health = 10;
+        onHealthChangeStatusCallMe.Invoke();
     }
 }

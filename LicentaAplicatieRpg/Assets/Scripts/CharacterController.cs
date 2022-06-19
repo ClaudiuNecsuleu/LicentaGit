@@ -39,8 +39,12 @@ public class CharacterController : MonoBehaviour
                 InteractableScript interactable = hit.collider.GetComponent<InteractableScript>();
                 if (interactable != null)
                 {
-                    playerMovement.MovePlayerToDestination(hit.point, interactable);
+                    if (Vector3.Distance(hit.point, transform.position) > interactable.radius)
+                    {
+                        playerMovement.MovePlayerToDestination(hit.point, interactable);
+                    }
                     interactable.playerWantToInteract = true;
+                 
                 }
             }
         }

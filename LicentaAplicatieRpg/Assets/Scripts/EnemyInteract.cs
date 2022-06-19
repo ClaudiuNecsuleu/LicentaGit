@@ -21,8 +21,6 @@ public class EnemyInteract : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("PlayerCharacter").GetComponentInChildren<Transform>();
     }
 
-    public delegate void OnHealthChangeStatus();
-    public OnHealthChangeStatus OnHealthChangeStatus2;
 
     void Update()
     {
