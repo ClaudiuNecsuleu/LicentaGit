@@ -14,6 +14,7 @@ ScriptsOnlyBuild:
     - EquipmentScript
     - GamePanelScript
     - HealthDesign
+    - HelpScript
     - InventoryDesignScript
     - InventoryScript
     - InventorySlot
@@ -286,83 +287,85 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2352}
     - Class: 114
-      Script: {instanceID: 2492}
+      Script: {instanceID: 2426}
     - Class: 114
-      Script: {instanceID: 2502}
+      Script: {instanceID: 2494}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 2504}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2742}
     - Class: 114
-      Script: {instanceID: 2964}
+      Script: {instanceID: 2804}
     - Class: 114
-      Script: {instanceID: 3160}
+      Script: {instanceID: 2966}
     - Class: 114
-      Script: {instanceID: 3230}
+      Script: {instanceID: 3162}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 3232}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 3694}
+      Script: {instanceID: 3310}
     - Class: 114
-      Script: {instanceID: 4244}
+      Script: {instanceID: 3696}
     - Class: 114
-      Script: {instanceID: 4356}
+      Script: {instanceID: 4246}
     - Class: 114
-      Script: {instanceID: 4606}
+      Script: {instanceID: 4358}
     - Class: 114
-      Script: {instanceID: 4628}
+      Script: {instanceID: 4608}
     - Class: 114
-      Script: {instanceID: 4870}
+      Script: {instanceID: 4630}
     - Class: 114
-      Script: {instanceID: 4910}
+      Script: {instanceID: 4872}
     - Class: 114
-      Script: {instanceID: 5026}
+      Script: {instanceID: 4912}
     - Class: 114
-      Script: {instanceID: 5062}
+      Script: {instanceID: 5028}
     - Class: 114
-      Script: {instanceID: 5090}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5296}
+      Script: {instanceID: 5092}
     - Class: 114
-      Script: {instanceID: 5382}
+      Script: {instanceID: 5298}
     - Class: 114
-      Script: {instanceID: 5398}
+      Script: {instanceID: 5384}
     - Class: 114
-      Script: {instanceID: 5484}
+      Script: {instanceID: 5400}
     - Class: 114
-      Script: {instanceID: 5840}
+      Script: {instanceID: 5486}
     - Class: 114
-      Script: {instanceID: 5980}
+      Script: {instanceID: 5842}
     - Class: 114
-      Script: {instanceID: 6132}
+      Script: {instanceID: 5982}
     - Class: 114
-      Script: {instanceID: 6458}
+      Script: {instanceID: 6134}
     - Class: 114
-      Script: {instanceID: 6488}
+      Script: {instanceID: 6460}
     - Class: 114
-      Script: {instanceID: 6576}
+      Script: {instanceID: 6490}
     - Class: 114
-      Script: {instanceID: 7352}
+      Script: {instanceID: 6578}
     - Class: 114
-      Script: {instanceID: 7446}
+      Script: {instanceID: 7354}
     - Class: 114
-      Script: {instanceID: 7554}
+      Script: {instanceID: 7410}
     - Class: 114
-      Script: {instanceID: 7858}
+      Script: {instanceID: 7450}
     - Class: 114
-      Script: {instanceID: 7962}
+      Script: {instanceID: 7558}
     - Class: 114
-      Script: {instanceID: 8066}
+      Script: {instanceID: 7862}
     - Class: 114
-      Script: {instanceID: 8140}
+      Script: {instanceID: 7966}
     - Class: 114
-      Script: {instanceID: 8324}
+      Script: {instanceID: 8070}
     - Class: 114
-      Script: {instanceID: 54894}
+      Script: {instanceID: 8144}
     - Class: 114
-      Script: {instanceID: 54900}
+      Script: {instanceID: 8328}
+    - Class: 114
+      Script: {instanceID: 27958}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -556,6 +559,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: ed582867cd88347f001a87fc47f7a84f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PetFallow
   - hash:
       serializedVersion: 2
       Hash: c56815729d2008cf779034a72eae055d
@@ -1470,6 +1479,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 81335fcac084d5b2c81f036bc65dfac6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PetScript
+  - hash:
+      serializedVersion: 2
       Hash: bd6ea799ce543b94f4f5ee00fab92674
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1644,16 +1659,10 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: ed582867cd88347f001a87fc47f7a84f
+      Hash: 2e0cb2f372fbf5db3d383eba48214992
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PetFallow
-  - hash:
-      serializedVersion: 2
-      Hash: 81335fcac084d5b2c81f036bc65dfac6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PetScript
+    className: HelpScript
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
